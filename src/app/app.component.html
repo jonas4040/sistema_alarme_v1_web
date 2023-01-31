@@ -355,19 +355,22 @@
   <br/>
   <h3>Quarto 1</h3><br/>
   <div class="card-container">
-   <div class="card">Janela :</div>
+   <div class="card">Janela :
+      {{ estado.estado| json }}
+   </div>
   </div>
   <br/>
   <div class="card-container">
     <div class="card">
       Temperatura:
+        {{ temperatura.Contando | json }}
     </div>
   </div>
 
   <div class="card-container">
-    <button class="btn">
+    <a routerLink="/reset"class="btn btn-info">
       Reset
-    </button>
+    </a>
   </div>
 
   <!-- Links -->
