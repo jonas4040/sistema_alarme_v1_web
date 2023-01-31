@@ -15,6 +15,7 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit(): void {
+    setInterval(() => {
     this.alarmeService.getTemperatura().subscribe(
       data => {
         if(data!==null && data!==undefined){
@@ -23,6 +24,7 @@ export class AppComponent implements OnInit{
         }
           console.log(data);
       });
+    },660); //chama de mais ou menos meio em meio segundo
   }
 
   title = 'Sistema de Alarme v1';
