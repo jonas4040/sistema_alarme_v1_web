@@ -356,21 +356,21 @@
   <h3>Quarto 1</h3><br/>
   <div class="card-container">
    <div class="card">Janela :
-      {{ estado.estado| json }}
+      {{estado}}
    </div>
   </div>
   <br/>
   <div class="card-container">
     <div class="card">
       Temperatura:
-        {{ temperatura.Contando | json }}&nbsp;ºC
+        {{ temperatura.valor | json }}&nbsp;ºC
     </div>
   </div>
 
   <div class="card-container">
-    <a routerLink="/reset"class="btn btn-info">
+    <button (click)="resetar()" class="btn btn-info">
       Reset
-    </a>
+    </button>
   </div>
 
   <!-- Links -->

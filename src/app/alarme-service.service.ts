@@ -22,7 +22,7 @@ export class AlarmeService {
   /**
    * JAVA METHOD resetar()
    */
-  public resetar() : Observable<string>{
+  public resetar(){
     return this.http.get<string>(this.alarmeURL+"reset");
   }
 

@@ -19,8 +19,7 @@ export class AppComponent implements OnInit{
     this.alarmeService.getTemperatura().subscribe(
       data => {
         if(data!==null && data!==undefined){
-          this.temperatura = JSON.parse(JSON.stringify(data));
-          this.estado = JSON.parse(JSON.stringify(data)) === '1'? 'aberta' : 'fechada';
+          this.temperatura = data;
         }
           console.log(data);
       });
@@ -28,4 +27,11 @@ export class AppComponent implements OnInit{
   }
 
   title = 'Sistema de Alarme v1';
+
+  resetar(){
+    this.alarmeService.resetar().subscribe(
+      response =>{
+        this.estado="fechada";
+      } );
+  }
 }
