@@ -20,8 +20,9 @@ export class AppComponent implements OnInit{
       data => {
         if(data!==null && data!==undefined){
           this.temperatura = data;
+          this.estado = data;
         }
-          console.log(data);
+          //console.log(data);
       });
     },660); //chama de mais ou menos meio em meio segundo
   }
