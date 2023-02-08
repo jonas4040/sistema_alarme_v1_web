@@ -356,14 +356,14 @@
   <h3>Quarto 1</h3><br/>
   <div class="card-container">
    <div class="card">Janela :
-      {{estado.ligado == true ? 'Fechada' : 'Aberta'}}
+      {{estado.ligado ? 'Fechada' : 'Aberta'}}
    </div>
   </div>
   <br/>
   <div class="card-container">
     <div class="card">
       Temperatura:
-        {{ temperatura.valor | json }}&nbsp;ºC
+        {{ +temperatura.valor }}&nbsp;ºC
     </div>
   </div>
 

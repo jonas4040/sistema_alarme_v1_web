@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
       data => {
         if(data!==null && data!==undefined){
           this.temperatura = data;
-          this.estado = data;
+          this.estado.ligado = data;
         }
           //console.log(data);
       });
